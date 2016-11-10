@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="LunchCheck">
 <head>
 <meta charset="utf-8">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    
+
 	<title>Module1</title>
 </head>
 <body>
 <h1>Testing</h1>
-<textarea rows="10" cols="45" name="text"></textarea>
-<button>click here</button>
-<div></div>
+<div ng-controller= "LunchCheckController">
+	<textarea rows="8" cols="45" name="text" ng-model="name"></textarea>
+<button ng-click="checking()">Check If Too Much</button>
+<div>{{check}}</div>
+</div>
+
 </body>
 </html>
